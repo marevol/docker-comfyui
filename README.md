@@ -32,10 +32,10 @@ Add your model files to the `models/` directory. These files will be mounted int
 Build the Docker image and start the container using Docker Compose:
 
 ```bash
-docker compose up --build
+docker compose up
 ```
 
-This will build the Docker image and start the ComfyUI service, exposing it on port `8000`.
+This will build the Docker image and start the ComfyUI service, exposing it on port `8188`.
 
 ### 4. Access ComfyUI
 
@@ -64,19 +64,11 @@ docker compose down
 
 ### Updating ComfyUI
 
-The Dockerfile is configured to pull the latest version of ComfyUI at build time. To update your setup:
+The Dockerfile is configured to pull the latest version of ComfyUI at build time. To rebuild the Docker image:
 
-1. Pull the latest changes from the ComfyUI repository:
-
-    ```bash
-    git pull
-    ```
-
-2. Rebuild the Docker image:
-
-    ```bash
-    docker compose up --build
-    ```
+```bash
+docker compose build
+```
 
 ### Adding More Models
 
